@@ -1,0 +1,3 @@
+[submodule "libs/portaleargo-api"]
+	path = libs/portaleargo-api
+	url = https://github.com/GitGinocchio/portaleargo-api
