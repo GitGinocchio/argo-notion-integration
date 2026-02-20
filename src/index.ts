@@ -1,8 +1,8 @@
 import "dotenv/config";
-import { Client as ArgoClient } from "./argo-api/Client.ts";
+import { Client as ArgoClient } from "./argo-api/Client.js";
 import { Client as NotionClient } from "@notionhq/client";
-import { setupCompitiDatabase, setupPromemoriaDatabase } from "./setup.ts";
-import { seedCompitiRecords, seedPromemoriaRecords } from "./seed.ts";
+import { setupCompitiDatabase, setupPromemoriaDatabase } from "./setup.js";
+import { seedCompitiRecords, seedPromemoriaRecords } from "./seed.js";
 import { ok } from "node:assert";
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
@@ -19,8 +19,8 @@ try {
 	await argoClient.login();
 	console.log("✓ Login Argo completato!\n");
 
-    const promemoria_id = await setupPromemoriaDatabase(notionClient, rootPage);
-	const compiti_id = await setupCompitiDatabase(notionClient, rootPage);
+    const promemoria_id = await setupPromemoriaDatabase(notionClient, NOTION_PARENT_PAGE);
+	const compiti_id = await setupCompitiDatabase(notionClient, NOTION_PARENT_PAGE);
 
     await seedPromemoriaRecords(notionClient, promemoria_id, argoClient.dashboard?.promemoria as any);
 	await seedCompitiRecords(notionClient, compiti_id, argoClient.dashboard?.registro as any)

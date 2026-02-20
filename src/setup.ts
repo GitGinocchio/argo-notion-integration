@@ -1,5 +1,5 @@
 import type { Client as NotionClient } from "@notionhq/client";
-import { findNotionObjectByName } from "./utils.ts";
+import { findNotionObjectByName } from "./utils.js";
 
 export const PROMEMORIA_DB_NAME = "Promemoria";
 export const COMPITI_DB_NAME = "Compiti";

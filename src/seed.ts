@@ -1,5 +1,5 @@
 import type { Client as NotionClient } from "@notionhq/client";
-import { buildDate, truncateTitle } from "./utils.ts";
+import { buildDate, truncateTitle } from "./utils.js";
 
 type Promemoria = {
   pkDocente: string;
