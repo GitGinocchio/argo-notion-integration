@@ -74,6 +74,9 @@ export async function seedPromemoriaRecords(
           },
         ],
       },
+      desAnnotazioniCompleta: {
+        rich_text: [{ text: { content: fullText } }],
+      },
       pkDocente: {
         rich_text: [{ text: { content: p.pkDocente || "" } }],
       },
@@ -179,6 +182,9 @@ export async function seedCompitiRecords(
               text: { content: shortTitle },
             },
           ],
+        },
+        compitoCompleto: {
+          rich_text: [{ text: { content: fullText } }],
         },
         dataConsegna: {
           date: consegnaDate,

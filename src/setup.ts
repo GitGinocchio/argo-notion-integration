@@ -13,6 +13,7 @@ export async function setupPromemoriaDatabase(client: NotionClient, parentPageId
     title: [{ type: "text", text: { content: PROMEMORIA_DB_NAME } }],
     properties: {
       desAnnotazioni: { title: {}, },
+      desAnnotazioniCompleta: { rich_text: {} },
       pkDocente: { rich_text: {} },
       datEvento: { date: {} },
       datGiorno: { date: {} },
@@ -40,6 +41,9 @@ export async function setupCompitiDatabase(
       compito: {
         title: {},
       },
+      compitoCompleto: {
+        rich_text: {}
+      },
       dataConsegna: {
         date: {},
       },
@@ -51,10 +55,7 @@ export async function setupCompitiDatabase(
       },
       ora: {
         number: {},
-      },
-      compitoCompleto: {
-        rich_text: {},
-      },
+      }
     },
   });
 
