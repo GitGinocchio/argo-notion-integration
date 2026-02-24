@@ -68,7 +68,7 @@ export async function loadExistingTitles(
     });
 
     for (const page of res.results as any[]) {
-      const titleArr = page.properties[propertyName]?.title;
+      const titleArr = page.properties[propertyName]?.title ?? page.properties[propertyName]?.rich_text;
       if (titleArr?.length > 0) {
         titles.add(titleArr[0].plain_text);
       }

@@ -118,6 +118,8 @@ export async function seedPromemoriaRecords(
       ],
     });
 
+    console.log(`Promemoria "${shortTitle}" aggiunto.`);
+
     existingTitles.add(shortTitle);
   }
 }
@@ -190,6 +192,8 @@ export async function seedCompitiRecords(
           },
         ],
       });
+
+      console.log(`Compito "${shortTitle}" aggiunto.`);
 
       existingTitles.add(shortTitle);
     }
