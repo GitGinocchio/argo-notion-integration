@@ -1,5 +1,11 @@
 # 🚀 Argo → Notion Integration
 
+> [!IMPORTANT]
+> **Disclaimer**
+> This extension is an unofficial, open-source project and is not affiliated, associated, authorized, endorsed by, or in any way officially connected with **Portale Argo**, or any of its subsidiaries or its affiliates. The official **Portale Argo** website can be found at www.portaleargo.it. 
+>
+> The names **Portale Argo** as well as related names, marks, emblems, and images are registered trademarks of their respective owners.
+
 This extension automatically syncs data from **Argo** to a Notion page using a **Notion Private Integration** and GitHub Actions.
 
 ---
